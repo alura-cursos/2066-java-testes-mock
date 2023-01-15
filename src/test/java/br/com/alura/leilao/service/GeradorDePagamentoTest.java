@@ -58,7 +58,7 @@ class GeradorDePagamentoTest {
 		
 		Pagamento pagamento = captor.getValue();
 		
-		Assert.assertEquals(LocalDate.now().plusDays(1), 
+		Assert.assertEquals(LocalDate.of(2020, 12, 7).plusDays(1), 
 				pagamento.getVencimento());
 		Assert.assertEquals(vencedor.getValor(), pagamento.getValor());
 		Assert.assertFalse(pagamento.getPago());
